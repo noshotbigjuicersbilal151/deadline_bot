@@ -14,7 +14,7 @@ def signedIn():
     signedInWindow.title(titlestr)
     signedInWindow.geometry("500x400")
 
-    titlePrompt = Label(signedInWindow, text="Enter Deadline Title:")
+    titlePrompt = Label(signedInWindow, text="Enter Deadline Title: ")
     titlePrompt.place(x=50,y=30)
 
     titleEntry = Entry(signedInWindow)
