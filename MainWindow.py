@@ -40,28 +40,4 @@ phoneNum.place(x=50, y=50)
 btn = Button(window, text="Sign In", fg="black", command = signedIn)
 btn.place(x=50, y = 100)
 
-def signedIn():
-
-    profile = phoneNum.get()
-    profile = profile.translate(profile.maketrans("", "", string.ascii_letters))
-
-    signedInWindow = Toplevel(window)
-    signedInWindow.title("Add Deadlines: ", profile)
-    signedInWindow.geometry("500x400")
-
-    titlePrompt = Label(signedInWindow, text="Enter Deadline Title:")
-    titlePrompt.place(x=50,y=30)
-
-    titleEntry = Entry(signedInWindow)
-    titleEntry.place(x=50,y=50)
-
-    datePrompt = Label(signedInWindow, text="Enter Deadline Date:")
-    datePrompt.place(x=50,y=80)
-
-    dateEntry = Entry(signedInWindow)
-    dateEntry.place(x=50,y=100)
-
-    deadlineButton = Button(signedInWindow, text = "Add Deadline")
-    deadlineButton.place(x=50,y=150)
-
 window.mainloop()
